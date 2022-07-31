@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="2.5" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.nolik.graphiccalculator.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Сторона a:"/>
+        <TextField fx:id="a" prefWidth="50"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Сторона b:"/>
+        <TextField fx:id="b" prefWidth="50"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Угол a:"/>
+        <TextField fx:id="aAngle" prefWidth="50"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Угол b:"/>
+        <TextField fx:id="bAngle" prefWidth="50"/>
+    </HBox>
+    <ImageView id="parallelepipedImageView">
+        <Image url="@parallelepiped.png"/>
+    </ImageView>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Площадь:"/>
+        <TextField fx:id="area" prefWidth="50" editable="false"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Объём:"/>
+        <TextField fx:id="volume" prefWidth="50" editable="false"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Радиус вписанного шара:"/>
+        <TextField fx:id="inscribedSphereRadius" prefWidth="50" editable="false"/>
+    </HBox>
+    <HBox spacing="5" alignment="TOP_RIGHT">
+        <Label text="Радиус описанного шара:"/>
+        <TextField fx:id="circumscribedSphereRadius" prefWidth="50" editable="false"/>
+    </HBox>
+    <Button onAction="#calculate" text="Рассчитать"/>
+</VBox>
