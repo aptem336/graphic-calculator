@@ -10,6 +10,8 @@ public class MainController {
     @FXML
     public FloatField b;
     @FXML
+    public FloatField c;
+    @FXML
     public FloatField aAngle;
     @FXML
     public FloatField bAngle;
@@ -24,6 +26,7 @@ public class MainController {
 
     @FXML
     protected void recalculate() {
+        c.setText(String.valueOf(parallelepiped.getC()));
         area.setText(String.valueOf(parallelepiped.getArea()));
         volume.setText(String.valueOf(parallelepiped.getVolume()));
         inscribedSphereRadius.setText(String.valueOf(parallelepiped.getInscribedSphereRadius()));
