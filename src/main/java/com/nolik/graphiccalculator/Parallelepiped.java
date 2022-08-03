@@ -9,9 +9,6 @@ public class Parallelepiped {
     private Float c = Float.NaN;
     private Float aAngle = Float.NaN;
     private Float bAngle = Float.NaN;
-    private Float area = Float.NaN;
-    private Float volume = Float.NaN;
-    private Float inscribedSphereRadius = Float.NaN;
     private Float circumscribedSphereRadius = Float.NaN;
 
     public void setBAngle(Float bAngle) {
@@ -50,11 +47,24 @@ public class Parallelepiped {
         return a * getB() * getC();
     }
 
+    /**
+     * Сферу можно вписать только в куб,
+     * радиус равен половине стороны
+     * @return радиус вписанной сферы
+     */
     public Float getInscribedSphereRadius() {
-        return inscribedSphereRadius;
+        if (getA().equals(getB()) && getB().equals(getC())) {
+            return getA() / 2;
+        } else {
+            return Float.NaN;
+        }
     }
 
+    /**
+     * Радиус описанной сферы равен половине диагонали
+     * @return радиус описанной сферы
+     */
     public Float getCircumscribedSphereRadius() {
-        return circumscribedSphereRadius;
+        return (float) Math.sqrt(Math.pow(getA(), 2) + Math.pow(getB(), 2) + Math.pow(getC(), 2)) / 2;
     }
 }
