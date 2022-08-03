@@ -1,27 +1,26 @@
 package com.nolik.graphiccalculator;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 
 public class MainController {
     public final Parallelepiped parallelepiped = new Parallelepiped();
     @FXML
-    public TextField a;
+    public FloatField a;
     @FXML
-    public TextField b;
+    public FloatField b;
     @FXML
-    public TextField aAngle;
+    public FloatField aAngle;
     @FXML
-    public TextField bAngle;
+    public FloatField bAngle;
     @FXML
-    private TextField area;
+    private FloatField area;
     @FXML
-    private TextField volume;
+    private FloatField volume;
     @FXML
-    private TextField inscribedSphereRadius;
+    private FloatField inscribedSphereRadius;
     @FXML
-    private TextField circumscribedSphereRadius;
+    private FloatField circumscribedSphereRadius;
 
     @FXML
     protected void recalculate() {
@@ -32,22 +31,35 @@ public class MainController {
     }
 
     public void setA(KeyEvent keyEvent) {
-        parallelepiped.setA(Float.valueOf(a.getText()));
+        parallelepiped.setA(a.getValue());
         recalculate();
+        b.setText(String.valueOf(parallelepiped.getB()));
+        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
+        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
+
     }
 
     public void setB(KeyEvent keyEvent) {
-        parallelepiped.setB(Float.valueOf(b.getText()));
+        parallelepiped.setB(b.getValue());
         recalculate();
+        a.setText(String.valueOf(parallelepiped.getA()));
+        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
+        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
     }
 
     public void setAAngle(KeyEvent keyEvent) {
-        parallelepiped.setAAngle(Float.valueOf(aAngle.getText()));
+        parallelepiped.setAAngle(aAngle.getValue());
         recalculate();
+        a.setText(String.valueOf(parallelepiped.getA()));
+        b.setText(String.valueOf(parallelepiped.getB()));
+        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
     }
 
     public void setBAngle(KeyEvent keyEvent) {
-        parallelepiped.setBAngle(Float.valueOf(bAngle.getText()));
+        parallelepiped.setBAngle(bAngle.getValue());
         recalculate();
+        a.setText(String.valueOf(parallelepiped.getA()));
+        b.setText(String.valueOf(parallelepiped.getB()));
+        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
     }
 }
