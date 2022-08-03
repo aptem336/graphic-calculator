@@ -25,11 +25,6 @@ public class MainController {
 
     @FXML
     protected void recalculate() {
-        a.setText(String.valueOf(parallelepiped.getA()));
-        b.setText(String.valueOf(parallelepiped.getB()));
-        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
-        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
-
         area.setText(String.valueOf(parallelepiped.getArea()));
         volume.setText(String.valueOf(parallelepiped.getVolume()));
         inscribedSphereRadius.setText(String.valueOf(parallelepiped.getInscribedSphereRadius()));
