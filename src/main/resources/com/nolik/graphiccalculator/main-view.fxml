@@ -32,22 +32,22 @@
     </ImageView>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Сторона с:"/>
-        <FloatField fx:id="c" prefWidth="50" editable="false"/>
+        <FloatField fx:id="c" prefWidth="50" editable="false" disable="true"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Площадь:"/>
-        <FloatField fx:id="area" prefWidth="50" editable="false"/>
+        <FloatField fx:id="area" prefWidth="50" editable="false" disable="true"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Объём:"/>
-        <FloatField fx:id="volume" prefWidth="50" editable="false"/>
+        <FloatField fx:id="volume" prefWidth="50" editable="false" disable="true"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Радиус вписанного шара:"/>
-        <FloatField fx:id="inscribedSphereRadius" prefWidth="50" editable="false"/>
+        <FloatField fx:id="inscribedSphereRadius" prefWidth="50" editable="false" disable="true"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Радиус описанного шара:"/>
-        <FloatField fx:id="circumscribedSphereRadius" prefWidth="50" editable="false"/>
+        <FloatField fx:id="circumscribedSphereRadius" prefWidth="50" editable="false" disable="true"/>
     </HBox>
 </VBox>
