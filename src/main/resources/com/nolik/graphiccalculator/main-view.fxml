@@ -11,6 +11,12 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+    <MenuBar>
+        <Menu text="Доп информация">
+            <MenuItem text="Об авторе" onAction="#openAboutAuthorView"/>
+            <MenuItem text="О программе" onAction="#openAboutProgramView"/>
+        </Menu>
+    </MenuBar>
     <HBox spacing="5" alignment="TOP_RIGHT">
         <Label text="Сторона a:"/>
         <FloatField fx:id="a" prefWidth="50" onKeyReleased="#setA"/>

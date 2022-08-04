@@ -1,7 +1,15 @@
 package com.nolik.graphiccalculator;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainController {
     public final Parallelepiped parallelepiped = new Parallelepiped();
@@ -33,7 +41,7 @@ public class MainController {
         circumscribedSphereRadius.setText(String.valueOf(parallelepiped.getCircumscribedSphereRadius()));
     }
 
-    public void setA(KeyEvent keyEvent) {
+    public void setA() {
         parallelepiped.setA(a.getValue());
         recalculate();
         b.setText(String.valueOf(parallelepiped.getB()));
@@ -42,7 +50,7 @@ public class MainController {
 
     }
 
-    public void setB(KeyEvent keyEvent) {
+    public void setB() {
         parallelepiped.setB(b.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
@@ -50,7 +58,7 @@ public class MainController {
         AD2Angle.setText(String.valueOf(parallelepiped.getAD2Angle()));
     }
 
-    public void setAD1Angle(KeyEvent keyEvent) {
+    public void setAD1Angle() {
         parallelepiped.setAD1Angle(AD1Angle.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
@@ -58,11 +66,29 @@ public class MainController {
         AD2Angle.setText(String.valueOf(parallelepiped.getAD2Angle()));
     }
 
-    public void setAD2Angle(KeyEvent keyEvent) {
+    public void setAD2Angle() {
         parallelepiped.setABAngle(AD2Angle.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
         b.setText(String.valueOf(parallelepiped.getB()));
         AD1Angle.setText(String.valueOf(parallelepiped.getAD1Angle()));
+    }
+
+    public void openAboutAuthorView() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about-author-view.fxml"));
+        Parent parent = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(parent));
+        stage.show();
+    }
+
+    public void openAboutProgramView() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about-program-view.fxml"));
+        Parent parent = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(parent));
+        stage.show();
     }
 }
