@@ -20,12 +20,12 @@
         <FloatField fx:id="b" prefWidth="50" onKeyReleased="#setB"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
-        <Label text="Угол a:"/>
-        <FloatField fx:id="aAngle" prefWidth="50" onKeyReleased="#setAAngle"/>
+        <Label text="Угол a^d1:"/>
+        <FloatField fx:id="AD1Angle" prefWidth="50" onKeyReleased="#setAD1Angle"/>
     </HBox>
     <HBox spacing="5" alignment="TOP_RIGHT">
-        <Label text="Угол b:"/>
-        <FloatField fx:id="bAngle" prefWidth="50" onKeyReleased="#setBAngle"/>
+        <Label text="Угол a^d2:"/>
+        <FloatField fx:id="AD2Angle" prefWidth="50" onKeyReleased="#setAD2Angle"/>
     </HBox>
     <ImageView id="parallelepipedImageView">
         <Image url="@parallelepiped.png"/>

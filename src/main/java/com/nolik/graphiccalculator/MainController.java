@@ -12,9 +12,9 @@ public class MainController {
     @FXML
     public FloatField c;
     @FXML
-    public FloatField aAngle;
+    public FloatField AD1Angle;
     @FXML
-    public FloatField bAngle;
+    public FloatField AD2Angle;
     @FXML
     private FloatField area;
     @FXML
@@ -37,8 +37,8 @@ public class MainController {
         parallelepiped.setA(a.getValue());
         recalculate();
         b.setText(String.valueOf(parallelepiped.getB()));
-        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
-        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
+        AD1Angle.setText(String.valueOf(parallelepiped.getAD1Angle()));
+        AD2Angle.setText(String.valueOf(parallelepiped.getAD2Angle()));
 
     }
 
@@ -46,23 +46,23 @@ public class MainController {
         parallelepiped.setB(b.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
-        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
-        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
+        AD1Angle.setText(String.valueOf(parallelepiped.getAD1Angle()));
+        AD2Angle.setText(String.valueOf(parallelepiped.getAD2Angle()));
     }
 
-    public void setAAngle(KeyEvent keyEvent) {
-        parallelepiped.setAAngle(aAngle.getValue());
+    public void setAD1Angle(KeyEvent keyEvent) {
+        parallelepiped.setAD1Angle(AD1Angle.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
         b.setText(String.valueOf(parallelepiped.getB()));
-        bAngle.setText(String.valueOf(parallelepiped.getBAngle()));
+        AD2Angle.setText(String.valueOf(parallelepiped.getAD2Angle()));
     }
 
-    public void setBAngle(KeyEvent keyEvent) {
-        parallelepiped.setBAngle(bAngle.getValue());
+    public void setAD2Angle(KeyEvent keyEvent) {
+        parallelepiped.setABAngle(AD2Angle.getValue());
         recalculate();
         a.setText(String.valueOf(parallelepiped.getA()));
         b.setText(String.valueOf(parallelepiped.getB()));
-        aAngle.setText(String.valueOf(parallelepiped.getAAngle()));
+        AD1Angle.setText(String.valueOf(parallelepiped.getAD1Angle()));
     }
 }
