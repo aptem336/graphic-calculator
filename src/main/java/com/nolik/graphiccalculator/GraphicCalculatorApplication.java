@@ -10,7 +10,7 @@ import java.io.IOException;
 public class GraphicCalculatorApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GraphicCalculatorApplication.class.getResource("main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GraphicCalculatorApplication.class.getResource("start-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Графический калькулятор объёмных фигур: параллелепипед");
         stage.setScene(scene);
